@@ -14,11 +14,11 @@ on:
       OS_TYPE:
         description: 'OS_TYPE'
         required: true
-        default: 'Flyme'
+        default: 'Generic'
       SGSI_TYPE:
         description: 'SGSI_TYPE(AB, A, or BOTH)'
         required: true
-        default: 'A'
+        default: 'AB'
       REPACK_NAME:
         description: 'REPACK_NAME'
         required: true
@@ -55,7 +55,7 @@ jobs:
 
       - name: Get the SGSI tool‌‌...
         run: |
-          git clone --recurse-submodules https://github.com/xiaoxindada/SGSI-build-tool.git -b 11 $GITHUB_WORKSPACE/Tool-SGSI-build
+          git clone --recurse-submodules https://github.com/fengs2021/SGSI-build-tool.git -b 11 $GITHUB_WORKSPACE/Tool-SGSI-build
 
       - name: Replace custom condensed content...
         run: |
